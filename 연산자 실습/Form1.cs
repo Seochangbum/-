@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -99,14 +100,15 @@ namespace 연산자_실습
             */
 
 
-            string[] array = new string[10];
+            /*string[] array = new string[10];
 
             array[0] = "동해 물과 백두산이".IndexOf("백두산").ToString();
             array[1] = "토요일에 먹는 토마토".LastIndexOf("토").ToString();
             array[2] = "질서 있는 퇴장".Contains("퇴").ToString();
             array[3] = "그 사람의 그림자는 그랬다.".Replace("그" , "이");
-            array[4] = "삼성 갤럭시".Insert(2, "애플");
+            array[4] = "삼성 갤럭시".Insert(2, " 애플");
             array[5] = "오늘은 왠지 더 배고프다".Remove(6, 2);
+            // Remove("오늘은 왠지 더 배고프다".IndexOf("더"), 1)로 해도됨 (참고)
             string[] spiltArray = "이름, 나이, 전화번호".Split(',');
             array[6] = spiltArray[0];
             array[7] = spiltArray[1];
@@ -130,16 +132,42 @@ namespace 연산자_실습
             textBox_Print.Text += array[7];
             textBox_Print.Text += " \r\n ";
             textBox_Print.Text += array[8];
-            textBox_Print.Text += " \r\n ";
+            textBox_Print.Text += " \r\n";
             textBox_Print.Text += "8." + array[9];
+            */
 
 
+
+
+            int[] resultArray = Divide(30, 15);
+          
+
+            
+            textBox_Print.Text += "몫: "+ resultArray[0].ToString() + "\r\n";
+            textBox_Print.Text += "나머지: "+ resultArray[1].ToString();
+            
+            
+
+        }
+
+        private int[] Divide(int x, int y)
+
+        {
+
+            int[] result = new int[2];
+            result[0] = x / y;
+            result[1] = x % y;
+
+
+            return result;
             
 
 
+        }   
 
-        }
+
         private void textBox_Print_TextChanged(object sender, EventArgs e)
+
         {
 
         }
@@ -155,3 +183,21 @@ namespace 연산자_실습
         }
     }
 }
+         
+
+        
+
+
+
+
+
+
+
+        
+        
+        
+        
+        
+        
+
+
