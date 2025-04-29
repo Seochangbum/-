@@ -28,6 +28,7 @@ namespace 연산자_실습
             */
 
 
+
             /*Q2
              * string num = "15";
             int num2; int num3;
@@ -37,6 +38,8 @@ namespace 연산자_실습
 
             textBox_Print.Text += "15에 10을 더하면" + num2 + "입니다.";
             */
+
+
 
             //Q3,4,5
             /*string productName = "노트북";
@@ -70,6 +73,9 @@ namespace 연산자_실습
             textBox_Print.Text = num2[1, 0, 1].ToString();
             */
 
+
+
+            /*재그드 배열 실습
             string[][] jaggedArray = new string[3][];
             jaggedArray[0] = new string[2] { "카리나", "윈터" };
             jaggedArray[1] = new string[3] { "닝닝", "지젤", "장원영" };
@@ -90,11 +96,45 @@ namespace 연산자_실습
             textBox_Print.Text += "\r\n";
             textBox_Print.Text += "3반 학생 목록: \r\n";
             textBox_Print.Text += "-" + jaggedArray[2][0];
-             
+            */
 
 
-            ;
+            string[] array = new string[10];
 
+            array[0] = "동해 물과 백두산이".IndexOf("백두산").ToString();
+            array[1] = "토요일에 먹는 토마토".LastIndexOf("토").ToString();
+            array[2] = "질서 있는 퇴장".Contains("퇴").ToString();
+            array[3] = "그 사람의 그림자는 그랬다.".Replace("그" , "이");
+            array[4] = "삼성 갤럭시".Insert(2, "애플");
+            array[5] = "오늘은 왠지 더 배고프다".Remove(6, 2);
+            string[] spiltArray = "이름, 나이, 전화번호".Split(',');
+            array[6] = spiltArray[0];
+            array[7] = spiltArray[1];
+            array[8] = spiltArray[2];
+            array[9] = "우리 나라 만세".Substring(5, 3);
+
+            textBox_Print.Text += "1." + array[0].ToString();
+            textBox_Print.Text += "\r\n";
+            textBox_Print.Text += "2." + array[1].ToString();
+            textBox_Print.Text += "\r\n";
+            textBox_Print.Text += "3." + array[2];
+            textBox_Print.Text += "\r\n";
+            textBox_Print.Text += "4." + array[3];
+            textBox_Print.Text += "\r\n";
+            textBox_Print.Text += "5." + array[4];
+            textBox_Print.Text += "\r\n";
+            textBox_Print.Text += "6." + array[5];
+            textBox_Print.Text += "\r\n";
+            textBox_Print.Text += "7." + array[6];
+            textBox_Print.Text += "\r\n ";
+            textBox_Print.Text += array[7];
+            textBox_Print.Text += " \r\n ";
+            textBox_Print.Text += array[8];
+            textBox_Print.Text += " \r\n ";
+            textBox_Print.Text += "8." + array[9];
+
+
+            
 
 
 
