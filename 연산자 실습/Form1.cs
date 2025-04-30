@@ -139,33 +139,122 @@ namespace 연산자_실습
 
 
 
-            int[] resultArray = Divide(30, 15);
+            /*int[] resultArray = Divide(30, 15);
           
 
             
             textBox_Print.Text += "몫: "+ resultArray[0].ToString() + "\r\n";
             textBox_Print.Text += "나머지: "+ resultArray[1].ToString();
-            
-            
+            */
+
+
+            /*string[] array = new string[10];
+            string array2 = "멈추지 않는 한 얼마나 천천히 가는지가 중요하지 않다. -공자";
+
+            array[0] += array2.IndexOf("-").ToString();
+            array[1] += array2.Remove(31,3);
+            array[2] += array2.IndexOf("얼마나").ToString();
+            array[3] += array2.IndexOf("천천히").ToString();
+            array[4] += array2.IndexOf("가는지").ToString();
+            array[5] += array2.Remove(29,1).ToString();
+            array[6] += array2.Remove(31,1).ToString();
+            array[7] += array2.Replace(" ",",").ToString();
+            string[] arraySplit = array2.Split(' ');
+            string[] selectWords = { arraySplit[3], arraySplit[4], arraySplit[5], };
+
+
+            textBox_Print.Text += array[0].ToString();
+            textBox_Print.Text += "\r\n";
+            textBox_Print.Text += array[1].ToString();
+            textBox_Print.Text += "\r\n";
+            textBox_Print.Text += array[2].ToString();
+            textBox_Print.Text += "\r\n";
+            textBox_Print.Text += array[3].ToString();
+            textBox_Print.Text += "\r\n";
+            textBox_Print.Text += array[4].ToString();
+            textBox_Print.Text += "\r\n";
+            textBox_Print.Text += array[5].ToString();
+            textBox_Print.Text += "\r\n";
+            textBox_Print.Text += array[6].ToString();
+            textBox_Print.Text += "\r\n";
+            textBox_Print.Text += array[7].ToString();
+            textBox_Print.Text += "\r\n";
+            textBox_Print.Text += array[8].ToString();
+
+            */
+
+
+
+
+
+
+
+
+
+            bool userChoice = true;
+
+            bool win = flipCoin(userChoice);
+
+            if (win)
+            {
+                textBox_Print.Text = "승리";
+            }
+            else
+            {
+                textBox_Print.Text = "패배";
+            }
+
+
+
+
+
+
+
+
+
 
         }
 
-        private int[] Divide(int x, int y)
+        /* private int[] Divide(int x, int y)
 
+         {
+
+             int[] result = new int[2];
+             result[0] = x / y;
+             result[1] = x % y;
+
+
+             return result;
+
+
+
+         }   
+        */
+
+
+
+
+
+
+        private bool flipCoin(bool userChoicea)
         {
+            Random rand = new Random();
+            int randomValue = rand.Next() % 2;
 
-            int[] result = new int[2];
-            result[0] = x / y;
-            result[1] = x % y;
+            if ((userChoicea && randomValue == 1) || (!userChoicea && randomValue == 0))
 
+            {
+                return true;
 
-            return result;
-            
-
-
-        }   
-
-
+            }
+            else
+            {
+                return false;
+            }
+        }
+                    
+        
+              
         private void textBox_Print_TextChanged(object sender, EventArgs e)
 
         {
